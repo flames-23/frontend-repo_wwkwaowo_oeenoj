@@ -3,22 +3,16 @@ import { ShieldCheck, Bug, Network } from 'lucide-react';
 
 const projects = [
   {
-    title: 'Banking Portal Audit',
-    description: 'Chained auth bypass and IDOR leading to account takeover. Coordinated disclosure and remediation.',
+    title: 'SMS Spam Detection App',
+    description: 'Python + basic NLP; custom dataset; 90%+ detection accuracy; real-time spam blocking.',
     icon: ShieldCheck,
-    tags: ['Web', 'Auth', 'IDOR', 'Bug Bounty'],
+    tags: ['Python', 'NLP', 'Security'],
   },
   {
-    title: 'E-commerce Stored XSS',
-    description: 'Multi-tenant stored XSS enabling session hijack; fixed with CSP hardening and sandboxed widgets.',
+    title: 'Personal Pentest Lab',
+    description: 'DVWA, Juice Shop, Metasploitable on local VMs; used Burp Suite, Nmap, SQLMap; documented OWASP Top 10 findings with a clear pentest report.',
     icon: Bug,
-    tags: ['XSS', 'CSP', 'Browser'],
-  },
-  {
-    title: 'Cloud Policy Misconfig',
-    description: 'Cross-tenant data exposure via object storage policies; implemented least-privilege and isolation.',
-    icon: Network,
-    tags: ['Cloud', 'IAM', 'RBAC'],
+    tags: ['OWASP', 'Burp', 'Nmap', 'SQLMap'],
   },
 ];
 
@@ -33,13 +27,13 @@ export default function Projects() {
           transition={{ duration: 0.6 }}
           className="text-2xl md:text-4xl font-bold"
         >
-          Highlighted Findings
+          Projects
         </motion.h2>
         <p className="mt-2 text-white/70 max-w-2xl">
-          Impactful reports driven by offensive research and responsible disclosure.
+          Hands-on builds and practice environments. Evidence over hype.
         </p>
 
-        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
           {projects.map((p, idx) => (
             <motion.article
               key={p.title}

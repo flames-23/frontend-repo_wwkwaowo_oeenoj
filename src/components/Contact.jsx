@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, ArrowRight } from 'lucide-react';
+import { Mail, ArrowRight, Phone, MapPin, Linkedin, FileDown } from 'lucide-react';
 
 export default function Contact() {
   const [email, setEmail] = useState('');
@@ -22,10 +22,10 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
           className="text-2xl md:text-4xl font-bold"
         >
-          Let’s collaborate
+          Contact
         </motion.h2>
         <p className="mt-2 text-white/70 max-w-2xl">
-          Red teaming, web app assessments, or responsible disclosure — I can help secure your product.
+          Professional, concise, evidence-driven. Open to internships and entry-level roles.
         </p>
 
         <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -34,11 +34,16 @@ export default function Contact() {
               <div className="rounded-xl bg-emerald-500/20 text-emerald-400 p-2">
                 <Mail className="h-5 w-5" />
               </div>
-              <h3 className="text-lg font-semibold">Secure contact</h3>
+              <h3 className="text-lg font-semibold">Direct</h3>
             </div>
-            <p className="mt-3 text-white/75 text-sm">
-              Prefer encrypted channels? PGP and Signal available on request.
-            </p>
+            <ul className="mt-3 space-y-2 text-white/80 text-sm">
+              <li className="flex items-center gap-2"><Mail className="h-4 w-4 text-emerald-300" /> ganiket25201001@gmail.com</li>
+              <li className="flex items-center gap-2"><Phone className="h-4 w-4 text-emerald-300" /> +91-9082112970</li>
+              <li className="flex items-center gap-2"><Linkedin className="h-4 w-4 text-emerald-300" /> <a className="underline underline-offset-4" target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/aniket-gupta-366662257">LinkedIn</a></li>
+              <li className="flex items-center gap-2"><MapPin className="h-4 w-4 text-emerald-300" /> Dadar, Mumbai</li>
+              <li className="flex items-center gap-2"><FileDown className="h-4 w-4 text-emerald-300" /> <a href="/Aniket_Gupta_Resume.pdf" download className="underline underline-offset-4">Download Résumé</a></li>
+            </ul>
+            <p className="mt-4 text-white/70 text-xs">PGP and Signal available on request.</p>
           </div>
 
           <form onSubmit={onSubmit} className="rounded-2xl border border-white/10 bg-white/5 p-6">
