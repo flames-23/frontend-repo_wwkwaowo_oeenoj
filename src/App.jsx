@@ -5,8 +5,8 @@ import Contact from './components/Contact';
 
 export default function App() {
   return (
-    <div className="min-h-screen text-white bg-[#0A0F1C] selection:bg-cyan-400 selection:text-black">
-      <div className="fixed inset-0 -z-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-cyan-500/10 via-transparent to-transparent" />
+    <div className="min-h-screen text-white bg-[#060A0A] selection:bg-emerald-400 selection:text-black">
+      <div className="fixed inset-0 -z-0 bg-[radial-gradient(1000px_600px_at_20%_0%,rgba(16,185,129,0.15),transparent),radial-gradient(800px_500px_at_80%_10%,rgba(16,185,129,0.1),transparent)]" />
       <Navbar />
       <main>
         <Hero />

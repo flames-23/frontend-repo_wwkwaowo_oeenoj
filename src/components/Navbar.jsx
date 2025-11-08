@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Shield, Bug, Mail } from 'lucide-react';
+import { Lock, Mail } from 'lucide-react';
 
 const navItems = [
   { label: 'Home', href: '#home' },
@@ -23,7 +23,7 @@ export default function Navbar() {
     >
       <nav className="mx-auto w-[92%] md:w-[85%] lg:w-[78%] backdrop-blur supports-[backdrop-filter]:bg-white/5 bg-white/10 dark:bg-black/30 border border-white/10 rounded-2xl px-4 py-3 flex items-center justify-between shadow-lg">
         <a href="#home" onClick={(e) => handleNavClick(e, '#home')} className="flex items-center gap-2 font-semibold tracking-tight">
-          <Shield className="h-5 w-5 text-cyan-400" />
+          <Lock className="h-5 w-5 text-emerald-400" />
           <span className="text-sm md:text-base">Cyber Innovator</span>
         </a>
         <div className="hidden md:flex items-center gap-6 text-sm text-white/80">
@@ -41,7 +41,7 @@ export default function Navbar() {
         <a
           href="#contact"
           onClick={(e) => handleNavClick(e, '#contact')}
-          className="inline-flex items-center gap-2 text-xs md:text-sm bg-cyan-500/90 hover:bg-cyan-400 text-black font-medium px-3 py-2 rounded-xl transition-colors"
+          className="inline-flex items-center gap-2 text-xs md:text-sm bg-emerald-500/90 hover:bg-emerald-400 text-black font-medium px-3 py-2 rounded-xl transition-colors"
         >
           <Mail className="h-4 w-4" />
           Hire Me

@@ -1,24 +1,24 @@
 import { motion } from 'framer-motion';
-import { ShieldCheck, Bug, Globe } from 'lucide-react';
+import { ShieldCheck, Bug, Network } from 'lucide-react';
 
 const projects = [
   {
     title: 'Banking Portal Audit',
-    description: 'Discovered chained auth bypass and IDOR leading to account takeover. Coordinated disclosure and remediation.',
+    description: 'Chained auth bypass and IDOR leading to account takeover. Coordinated disclosure and remediation.',
     icon: ShieldCheck,
     tags: ['Web', 'Auth', 'IDOR', 'Bug Bounty'],
   },
   {
-    title: 'E-commerce XSS Worm',
-    description: 'Identified stored XSS vector capable of session hijacking via supply chain reviews and CSP hardening.',
+    title: 'E-commerce Stored XSS',
+    description: 'Multi-tenant stored XSS enabling session hijack; fixed with CSP hardening and sandboxed widgets.',
     icon: Bug,
-    tags: ['XSS', 'CSP', 'Supply Chain'],
+    tags: ['XSS', 'CSP', 'Browser'],
   },
   {
-    title: 'SaaS Multi-tenant Isolation',
-    description: 'Found cross-tenant data leak through misconfigured object storage policies; designed defense-in-depth controls.',
-    icon: Globe,
-    tags: ['Cloud', 'S3', 'RBAC'],
+    title: 'Cloud Policy Misconfig',
+    description: 'Cross-tenant data exposure via object storage policies; implemented least-privilege and isolation.',
+    icon: Network,
+    tags: ['Cloud', 'IAM', 'RBAC'],
   },
 ];
 
@@ -36,7 +36,7 @@ export default function Projects() {
           Highlighted Findings
         </motion.h2>
         <p className="mt-2 text-white/70 max-w-2xl">
-          A selection of impactful vulnerabilities uncovered through methodical research and creative exploitation.
+          Impactful reports driven by offensive research and responsible disclosure.
         </p>
 
         <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -47,10 +47,10 @@ export default function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.05, duration: 0.5 }}
-              className="group rounded-2xl border border-white/10 bg-white/5 p-5 hover:bg-white/10 transition-colors shadow-lg"
+              className="group rounded-2xl border border-emerald-500/20 bg-emerald-500/5 p-5 hover:bg-emerald-500/10 transition-colors shadow-lg"
             >
               <div className="flex items-center gap-3">
-                <div className="rounded-xl bg-cyan-500/20 text-cyan-400 p-2">
+                <div className="rounded-xl bg-emerald-500/20 text-emerald-400 p-2">
                   <p.icon className="h-5 w-5" />
                 </div>
                 <h3 className="text-lg font-semibold">{p.title}</h3>
